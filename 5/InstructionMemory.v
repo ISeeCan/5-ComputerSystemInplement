@@ -10,7 +10,7 @@ module InstructionMemory(
         for (i = 0; i < 1024; i = i + 1) begin
             instructionMemory[i] = 32'h00000000;  // 将所有指令初始化为 0
         end
-        $readmemh("C:\\Users\\w1098\\Documents\\Code\\Local\\Verilog\\5_ComputerSystemInplement\\5\\code.txt", instructionMemory);
+        $readmemh("C:\\YOUR-PATH-TO-CODE\\code.txt", instructionMemory);
         for (i = 0; i < 64; i = i + 1) begin //本身应该到1024，但是因为示例压根没那么长，就不输出那么多了
             $display("instructionMemory[%0d] = %h", i, instructionMemory[i]);
         end
